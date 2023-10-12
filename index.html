@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="sectionHome">
+        <div class="bg-container d-flex flex-column justify-content-center">
+            <div class="customer-card-container ">
+                <h1 class="main-heading">CUSTOMER SEGMENTATION</h1>
+                <button class="button" onclick="display('sectionDetailsForm')">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionDetailsForm">
+        <div class="container">
+            <h1 class="form-heading">Add User</h1>
+            <form id="myForm">
+                <div class="mb-3">
+                    <label for="customerId">Customer Id</label>
+                    <input type="text" class="form-control" id="customerId" />
+                    <p id="customerIdErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="yearsEmployed">years Employed</label>
+                    <input type="text" class="form-control" id="yearsEmployed" />
+                    <p id="yearsEmployedErrorMsg" class="error-message"></p>
+                </div>
+                <div>
+                    <label for="income">Income:</label>
+                    <input type="text" class="form-control" id="income" name="income" />
+                    <p id="incomeErrorMsg" class="error-message"></p>
+                </div>
+               <div>
+                 <label for="cardDept">Card Dept:</label>
+                    <input type="number" class="form-control" id="cardDept" name="cardDept"  />
+                    <p id="cardDeptErrorMsg" class="error-message"></p>  
+               </div>
+               <div>
+                   <label for="otherDept">other Dept</label>
+                   <input type="number" class="form-control" id="otherDept" name="otherDept" />
+                   <p id="otherDeptErrorMsg" class="error-message"></p>
+               </div>
+                <button class="btn btn-primary" onclick="display('sectionResultPage')">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="sectionResultPage">
+        <div class="result-card-page text-center">
+            <h1 class="result-heading">
+                Result page
+            </h1>
+            <p class="para">This customer belongs:label 1 </p>
+        <button class="button btn-primary" onclick="display('sectionHome')"></a>back button</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bg-container {
+    background-image: url("https://1.bp.blogspot.com/-347uBS0pwCI/WraBTtSb8XI/AAAAAAAACFs/u0zXyVtEyPkOffC-Lfb_gPmRArwbWoeJwCLcBGAs/s1600/141505122501customersegmentation.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.customer-card-container{
+    text-align: center;
+    background-color:white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 5px;
+    margin:400px;
+}
+
+.button {
+    color: white;
+    background-color: #68BB59;
+    width: 138px;
+    height: 36px;
+    border-width: 0px;
+    border-radius: 20px;
+}
+
+.main-heading {
+    font-family: "italic";
+    font-weight: bold;
+}
+
+.paragraph {
+    font-family: "Roboto";
+}
+
+.form-heading {
+    font-family: "Roboto";
+    font-size: 36px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+.result-card{
+    background-image: url("https://img.freepik.com/free-vector/bokeh-defocused-background_23-2148497833.jpg?w=1060&t=st=1696243752~exp=1696244352~hmac=b4ccb40a10b579660beb323a61a595021d3e13239421f265e829198342fc66cf");
+   height:100vh;
+   background-size:cover;
+}
+.result-heading{
+    font-family:"Italic";
+    color:#25b1cc;
+    font-weight: 500;
+    font-size:60px;
+}
+.paragraph{
+    font-family: "Italic";
+    font-weight:300;
+    font-size:30px;
+    
+}
+.result-card-page{
+    background-image: url("https://img.freepik.com/free-vector/bokeh-defocused-background_23-2148497833.jpg?w=1060&t=st=1696250024~exp=1696250624~hmac=45063cb3381355a7f7a70f65f0be584f708a16de1687a8417387812e063c7099");
+    height:100vh;
+    background-size:cover ;
+}
+.result-heading{
+    font-family:Italic;
+    color:#25b1cc;
+    font-size:50px;
+    font-weight: 600;
+    
+}
+.para{
+    font-family:Italic;
+    font-size:30px;
+}
+.button{
+    color: white;
+    background-color: #68BB59;
+    width: 138px;
+    height: 36px;
+    border-width: 0px;
+    border-radius: 20px;
+}
+</style>
+<script>
+    let customerIdEl = document.getElementById("customerId");
+let customerIdErrMsgEl = document.getElementById("customerIdErrMsg");
+
+let yearsEmployedEl = document.getElementById("yearsEmployed");
+let yearsEmployedErrorMsgEl = document.getElementById("yearsEmployedErrorMsg");
+
+let incomeEl=document.getElementById("income");
+let incomeErrorMsgEl=document.getElementById("incomeErrorMsg");
+
+let cardDeptEl=document.getElementById("cardDept");
+let cardDeptErrorMsgEl=document.getElementById("cardDeptErrorMsg");
+
+let otherDeptEl=document.getElementById("otherDept");
+let otherDeptErrorMsgEl=document.getElementById("otherDeptErrorMsg");
+
+let myFormEl = document.getElementById("myForm");
+
+let formData = {
+    customerId: "",
+    yearsEmployed: "",
+    income:"",
+   cardDept:"",
+   otherDept:""
+};
+
+customerIdEl.addEventListener("change", function(event) {
+    if (event.target.value === "") {
+        customerIdErrMsgEl.textContent = "Required*";
+    } else {
+        customerIdErrMsgEl.textContent = "";
+    }
+
+    formData.customerId = event.target.value;
+});
+
+yearsEmployedEl.addEventListener("change", function(event) {
+    if (event.target.value === "") {
+        yearsEmployedErrorMsgEl.textContent = "Required*";
+    } else {
+        yearsEmployedErrorMsgEl.textContent = "";
+    }
+
+    formData.yearsEmployed = event.target.value;
+});
+
+incomeEl.addEventListener("change",function(event){
+    if (event.target.value === ""){
+        incomeErrorMsgEl.textContent="Required";
+    }else{
+         incomeErrorMsgEl.textContent="";
+    }
+    formData.income = event.target.value;
+});
+
+cardDeptEl.addEventListener("change",function(event){
+    if (event.target.value === ""){
+        cardDeptErrorMsgEl.textContent="Required";
+    }else{
+        cardDeptErrorMsgEl.textContent="";
+    }
+    formData.cardDept = event.target.value;
+});
+
+otherDeptEl.addEventListener("change", function(event) {
+    if (event.target.value === "") {
+        otherDeptErrorMsgEl.textContent = "Required";
+    } else {
+        otherDeptErrorMsgEl.textContent = "";
+    }
+    formData.otherDept = event.target.value;
+});
+
+
+function validateFormData(formData) {
+    let {
+        customerId,
+        yearsEmployed,
+        income,
+        cardDept,
+       otherDept
+    } = formData;
+    if (customerId === "") {
+        customerIdErrMsgEl.textContent = "Required*";
+    }
+    if (yearsEmployed === "") {
+         yearsEmployedErrorMsgEl.textContent = "Required*";
+    }
+    if (income===""){
+        incomeErrorMsgEl.textContent="Required*";
+    }
+    if (cardDept === ""){
+        cardDeptErrorMsgEl.textContent="Required*";
+    }
+    if (otherDept === ""){
+        otherDeptErrorMsgEl.textContent="Required*";
+    }
+}
+
+function submitFormData(formData) {
+    let options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            Authorization: "Bearer 00f3f8fde06120db02b587cc372c3d85510896e899b45774068bb750462acd9f",
+        },
+        body: JSON.stringify(formData)
+    };
+
+    let url = "https://gorest.co.in/public-api/users";
+
+    fetch(url, options)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(jsonData) {
+            console.log(jsonData);
+             if (jsonData.code === 422) {
+                if (jsonData.data[0].message === "has already been taken") {
+                    customerIdErrMsgEl.textContent = "CustomerId Already Exists";
+                }
+            }
+        });
+}
+
+
+
+myFormEl.addEventListener("submit", function (event) {
+    event.preventDefault();
+    validateFormData(formData);
+
+    // Send the form data to the backend using an AJAX request
+    fetch("/submit_form", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (jsonData) {
+        console.log(jsonData);
+        // Handle the response from the backend as needed
+    });
+});
+
+</script>
